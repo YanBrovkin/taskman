@@ -1,0 +1,14 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Tasks"></Label>
+</ActionBar>
+
+<GridLayout class="page page-content">
+    <ListView [items]="items"  class="list-group">
+        <ng-template let-item="item">
+            <StackLayout orientation="horizontal" class="list-group-item">
+                <Label [nsRouterLink]="['../item', item.id]" [text]="item.name" horizontalAlignment="left"></Label>
+                <Label [nsRouterLink]="['../item', item.id]" text="1" horizontalAlignment="right"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>
